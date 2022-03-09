@@ -1,8 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-const upper = "abcdefghijklmnopqrstuvwxyz";
-const lower = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lower = "abcdefghijklmnopqrstuvwxyz";
+const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numbers = "0123456789";
 const symbols = "!@#$%^&*_-+=";
 
@@ -17,3 +17,10 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function generatePassword() {
+  confirm("Password with lower case characters.");
+  confirm("Password with upper case characters.");
+  confirm("Password with numbers.");
+  confirm("Password with symbols.");
+}

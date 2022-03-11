@@ -13,36 +13,11 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-const lower = "abcdefghijklmnopqrstuvwxyz";
-const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const numbers = "0123456789";
-const symbols = "!@#$%^&*_-+=";
 
-function generatePassword() {
-  var txt;
-  if (prompt("Number of characters in password.")) {
-    txt = "You pressed OK!";
-  } else {
-    txt = "You pressed Cancel!";
-  };
-  if (confirm("Generate with lower case characters.")) {
-    txt = "Adding lower case characters.";
-  } else {
-    txt = "No lower case characters.";
-  };
-  if (confirm("Generate with upper case characters.")) {
-    txt = "Adding upper case characters.";
-  } else {
-    txt = "No upper case characters.";
-  };
-  if (confirm("Generate with numbers.")) {
-    txt = "Adding numbers.";
-  } else {
-    txt = "No numbers.";
-  };
-  if (confirm("Generate with symbols.")) {
-    txt = "Adding symbols.";
-  } else {
-    txt = "No symbols.";
-  };
-};
+// Character collections
+const lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+const upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P","Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "_", "-", "+", "=", "//"];
+
+// 

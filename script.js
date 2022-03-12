@@ -60,5 +60,10 @@ function generatePassword() {
   }
 
 //Random character select
-
+let generatedPassword = ""
+for (let i = 0; i < length; i++) {
+  let numberGen =[Math.floor(Math.random() * possibleCharacters.length)];
+  generatedPassword = generatedPassword + possibleCharacters[numberGen];
 }
+return generatedPassword;
+};

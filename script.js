@@ -21,6 +21,10 @@ function generatePassword() {
   var numberCharacters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   var symbolCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "_", "-", "+", "=", "\\"];
   var selectedCollections = [];
+  var isLowerCharacters = false;
+  var isUpperCharacters = false;
+  var isNumberCharacters = false;
+  var isSymbolCharacters = false;
 
 // User input
   passwordLength = prompt("Length of password; between 8 and 128 characters.");
@@ -32,53 +36,53 @@ function generatePassword() {
     alert("Generating " + passwordLength + " character long password.");
   }
 
-  lowerCharacters = confirm("Add lowercase?");
-  if (lowerCharacters) {
+  isLowerCharacters = confirm("Add lowercase?");
+  if (isLowerCharacters) {
     alert("Adding lowercase characters.");
   } else {
     alert("No lower case characters will be added.");
   }
 
-  upperCharacters = confirm("Add uppecase?");
-  if (lowerCharacters) {
+  isUpperCharacters = confirm("Add uppecase?");
+  if (isUpperCharacters) {
     alert("Adding uppercase characters.");
   } else {
     alert("No uppercase characters will be added.");
   }
 
-  numberCharacters = confirm("Add numbers?");
-  if (numberCharacters) {
+  isNumberCharacters = confirm("Add numbers?");
+  if (isNumberCharacters) {
     alert("Adding numbers.");
   } else {
     alert("No numbers will be added.");
   }
 
-  symbolCharacters = confirm("Add symbols?");
-  if (symbolCharacters) {
+  isSymbolCharacters = confirm("Add symbols?");
+  if (isSymbolCharacters) {
     alert("Adding symbols.");
   } else {
     alert("No symbols will be added.");
   }
 
 // Stringing characters together
-  if (lowerCharacters) {
+  if (isLowerCharacters) {
     selectedCollections = selectedCollections.concat(lowerCharacters);
   }
-  if (upperCharacters) {
+  if (isUpperCharacters) {
     selectedCollections = selectedCollections.concat(upperCharacters);
   }
-  if (numberCharacters) {
+  if (isNumberCharacters) {
     selectedCollections = selectedCollections.concat(numberCharacters);
   }
-  if (symbolCharacters) {
+  if (isSymbolCharacters) {
     selectedCollections = selectedCollections.concat(symbolCharacters);
   }
 
 //Random character select
-let generatedPassword = ""
-for (let i = 0; i < length; i++) {
-  let numberGen =[Math.floor(Math.random() * selectedCollections.length)];
-  generatedPassword = generatedPassword + selectedCollections[numberGen];
-}
-return generatedPassword;
-};
+  let generatedPassword = ""
+  for (let i = 0; i < length; i++) {
+   let numberGen =[Math.floor(Math.random() * selectedCollections.length)];
+   generatedPassword = generatedPassword + selectedCollections[numberGen];
+  }
+  console.log (generatedPassword);
+  };

@@ -33,9 +33,30 @@ function generatePassword() {
 
   lowerCharacters = confirm("Add lowercase?");
   if (lowerCharacters) {
-    alert("Adding lower case characters.")
+    alert("Adding lowercase characters.");
   } else {
-    alert("No lower case characters will be added.")
+    alert("No lower case characters will be added.");
+  }
+
+  upperCharacters = confirm("Add uppecase?");
+  if (lowerCharacters) {
+    alert("Adding uppercase characters.");
+  } else {
+    alert("No uppercase characters will be added.");
+  }
+
+  numberCharacters = confirm("Add numbers?");
+  if (numberCharacters) {
+    alert("Adding numbers.");
+  } else {
+    alert("No numbers will be added.");
+  }
+
+  symbolCharacters = confirm("Add symbols?");
+  if (symbolCharacters) {
+    alert("Adding symbols.");
+  } else {
+    alert("No symbols will be added.");
   }
 
 //Random character select

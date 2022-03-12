@@ -70,8 +70,8 @@ function generatePassword() {
   if (numberCharacters) {
     selectedCollections = selectedCollections.concat(numberCharacters);
   }
-  if (specialCharacters) {
-    selectedCollections = selectedCollections.concat(specialCharacters);
+  if (symbolCharacters) {
+    selectedCollections = selectedCollections.concat(symbolCharacters);
   }
 
 //Random character select

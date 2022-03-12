@@ -31,7 +31,13 @@ function generatePassword() {
     alert("Generating " + passwordLength + " character long password.");
   }
 
-
+  lowerCharacters = confirm("Add lowercase?");
+  if (lowerCharacters) {
+    alert("Adding lower case characters.")
+  } else {
+    alert("No lower case characters will be added.")
+  }
 
 //Random character select
+
 }

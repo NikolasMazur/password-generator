@@ -20,6 +20,7 @@ function generatePassword() {
   var upperCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P","Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var numberCharacters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   var symbolCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "_", "-", "+", "=", "\\"];
+  var selectedCollections = [];
 
 // User input
   passwordLength = prompt("Length of password; between 8 and 128 characters.");
@@ -59,11 +60,25 @@ function generatePassword() {
     alert("No symbols will be added.");
   }
 
+// Stringing characters together
+  if (lowerCharacters) {
+    selectedCollections = selectedCollections.concat(lowerCharacters);
+  }
+  if (upperCharacters) {
+    selectedCollections = selectedCollections.concat(upperCharacters);
+  }
+  if (numberCharacters) {
+    selectedCollections = selectedCollections.concat(numberCharacters);
+  }
+  if (specialCharacters) {
+    selectedCollections = selectedCollections.concat(specialCharacters);
+  }
+
 //Random character select
 let generatedPassword = ""
 for (let i = 0; i < length; i++) {
-  let numberGen =[Math.floor(Math.random() * possibleCharacters.length)];
-  generatedPassword = generatedPassword + possibleCharacters[numberGen];
+  let numberGen =[Math.floor(Math.random() * selectedCollections.length)];
+  generatedPassword = generatedPassword + selectedCollections[numberGen];
 }
 return generatedPassword;
 };

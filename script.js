@@ -19,7 +19,7 @@ function generatePassword() {
   var lowerCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var upperCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P","Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var numberCharacters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  var symbolCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "_", "-", "+", "=", "\\"];
+  var symbolCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "_", "-", "+", "="];
   var selectedCollections = [];
   var isLowerCharacters = false;
   var isUpperCharacters = false;
@@ -80,9 +80,9 @@ function generatePassword() {
 
 //Random character select
   let generatedPassword = ""
-  for (let i = 0; i < length; i++) {
-   let numberGen =[Math.floor(Math.random() * selectedCollections.length)];
-   generatedPassword = generatedPassword + selectedCollections[numberGen];
+  for (let i = 0; i < passwordLength; i++) {
+    let numberGen = [Math.floor(Math.random() * selectedCollections.length)];
+    generatedPassword = generatedPassword + selectedCollections[numberGen];
   }
-  console.log (generatedPassword);
+  return (generatedPassword);
   };
